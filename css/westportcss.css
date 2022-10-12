@@ -1,0 +1,15 @@
+h1 {
+    font-family: Verdana;
+    font-size: 1.75em;
+    font-weight: bold;
+    text-decoration: none;
+    font-variant: small-caps;
+    color: red;
+}
+
+p {
+    line-height: 1em;
+    text-align: justify;
+    font-size: 14pt;
+    font-family: Georgia;
+}
