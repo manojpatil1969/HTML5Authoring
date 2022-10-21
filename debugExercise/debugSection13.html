@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Debug Section 13</title>
+        <style>
+            form{
+                padding: 10px;
+                background-color:darkgrey;
+                width: 45%;
+            }
+
+            .container {
+                margin: 20px;
+            }
+
+            #gender{
+                margin-left: 10%;
+            }
+
+            textarea {
+                margin-left: 30px;
+                height: 100px;
+            }
+
+            button {
+                background-color: white;
+                padding: 10px 25px;
+                text-align: center;
+                display: inline-block;
+                font-size: 15px;
+                margin: 4px 2px;
+                cursor: pointer;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Student’s Information Form <hl>
+        <div class=”container”>
+            <form action="">
+                <label for=”studentName”> Student Name</label>
+                <input type=”text” id=”studentName” /><br>
+
+                <label for=”studentEmail”> Email: </label>
+                <input type=”email” id=”studentEmail” /><br>
+
+                <label for=”gender”> Gender </label> <br/>
+                <input type="radio" id="gender" value="Male" checked>Male<br>
+                <input type="radio" id="gender" value="Female">Female<br>
+
+                <label for=”address”> Address </label> <br/>
+                <textarea id=”address” rows=”5”> </textarea><br>
+
+                <button type=”submit” class=”submit”>Submit </button>
+                <button type=”clear” class=”clear”>Clear </button>
+            </form>
+        </div>
+    </body>
+</html>
