@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FelxBox Demo</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 100%;
+            align-items: flex-end;
+        }
+
+        #one, #two, #three {
+            width: 30%;
+            border: 1px solid black;
+            font-family: Arial;
+            /* font-size: .75em; */
+            padding: 10px;
+        }
+
+        #one { background-color: lightblue; order: 2}
+        #two { background-color: lightpink; order: 3}
+        #three { background-color: lightgreen; order: 1}
+    </style>
+</head>
+<body>
+    <div id="container">    <!-- Start of div id="container" -->
+        <div id="one">
+            <p>
+                <h2>One</h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae ullamcorper neque, ac condimentum urna. Vestibulum sem dolor, interdum quis aliquet sit amet, tempor in mauris. Suspendisse auctor varius tortor, eget pellentesque nisl consectetur non. Ut aliquam ultricies elit nec faucibus. Phasellus consectetur ut ligula et dapibus. Maecenas facilisis diam risus, ut congue felis sagittis id. Integer non nisl eu massa pretium faucibus eget vel dolor. Nam condimentum sapien tortor, a vestibulum nunc dapibus sed.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae ullamcorper neque, ac condimentum urna. Vestibulum sem dolor, interdum quis aliquet sit amet, tempor in mauris. Suspendisse auctor varius tortor, eget pellentesque nisl consectetur non. Ut aliquam ultricies elit nec faucibus. Phasellus consectetur ut ligula et dapibus. Maecenas facilisis diam risus, ut congue felis sagittis id. Integer non nisl eu massa pretium faucibus eget vel dolor. Nam condimentum sapien tortor, a vestibulum nunc dapibus sed.
+            </p>
+        </div>              <!-- End of div id="container" -->
+
+        <div id="two">
+            <p>
+                <h2>Two</h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae ullamcorper neque, ac condimentum urna.
+                Vestibulum sem dolor, interdum quis aliquet sit amet, tempor in mauris. Suspendisse auctor varius tortor, eget pellentesque nisl consectetur non. Ut aliquam ultricies elit nec faucibus. Phasellus consectetur ut ligula et dapibus. Maecenas facilisis diam risus, ut congue felis sagittis id. Integer non nisl eu massa pretium faucibus eget vel dolor. Nam condimentum sapien tortor, a vestibulum nunc dapibus sed.
+            </p>
+        </div>
+
+        <div id="three">
+             <p>
+                <h2>Three</h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae ullamcorper neque, ac condimentum urna. Vestibulum sem dolor, interdum quis aliquet sit amet, tempor in mauris. Suspendisse auctor varius tortor, eget pellentesque nisl consectetur non. Ut aliquam ultricies elit nec faucibus. Phasellus consectetur ut ligula et dapibus. Maecenas facilisis diam risus, ut congue felis sagittis id. Integer non nisl eu massa pretium faucibus eget vel dolor. Nam condimentum sapien tortor, a vestibulum nunc dapibus sed.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
