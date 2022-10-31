@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Forms</title>
+    <style>
+        #comtents {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        form {
+            width: 80%;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #fafafa;
+        }
+
+        input {
+            width: 100%;
+            height: 35px;
+            margin-bottom: 20px;            
+            font-size: 1.50em;
+            background-color: #ececec;
+            border: none;
+            border-bottom: 2px dashed blue;
+        }
+
+        select {
+            width: 100%;
+            height: 35px;
+            font-size: 1.5em;
+            background-color: #ececec;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 25px;
+            padding-bottom: 0px;
+        }
+
+        p, p > label {
+            font-family: Arial;
+            font-size: 1.5em;
+        }
+
+        button {
+            width: 100%;
+            height: 45px;
+            font-size: 1.5em;
+            background-color: orange;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        footer {
+            padding-top: 20px;
+            border-top: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Puppy Sign-up Form</h1>
+        <h2>Css Forms Exercise Section 4</h2>
+    </div>
+    <div id="contents">
+        <input type="text" id="Oname" placeholder="Owner Name">
+        <input type="phone" id="phone" placeholder="Phone Number">
+        <input type="email" id="email" placeholder="email">
+        <input type="text" id="Pname" placeholder="Puppy's name">
+        <input type="text" id="breed" placeholder="Breed">
+        <input type="date" id="bdate" placeholder="Birth Date">
+        <p>Vaccination: <br/>
+            <input type="checkbox" name="vaccination" id="parvo" value="parvo">
+                <label for="parvo">Parvo</label><br/>
+            <input type="checkbox" name="vaccination" id="distemper" value="distemper">
+                <label for="distemper">Distemper</label><br/>
+            <input type="checkbox" name="vaccination" id="rabies" value="rabies">
+                <label for="rabies">Rabies</label><br/>
+        </p>
+        <p>
+            <select>
+                <option value="1">Radio</option>
+                <option value="2">Driving by</option>
+                <option value="3">Friends/Neighbours</option>
+            </select>
+        </p>
+        <button>Submit</button>
+    </div>
+    <div id="footer">
+        Copyright &copy;2020 ABC Canian School
+    </div>
+</body>
+</html>

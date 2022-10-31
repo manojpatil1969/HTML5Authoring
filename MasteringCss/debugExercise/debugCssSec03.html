@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Selectors</title>
+    <style>
+        h1 {
+            color: blue;
+            font-family: Arial;
+        }
+
+        h2 {
+            font-family: Arial;
+        }
+
+        #main {
+            font-size: 1.5em;
+            color: #121212;
+        }
+
+        .fancy {
+            text-decoration: underline;
+        }
+
+        h1, h2 {
+            color: green;
+        }
+
+        header > h2 {
+            font-family: Arial;
+            font-size: 3em;
+        }
+
+        #main > h2 {
+            color:brown;
+        }
+
+        p::first-line {
+            font-size: 1.25em;
+        }
+
+        p::first-letter {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header align=”center”>
+        <h2>Living in Southwestern Connecticut</h2>
+        <p class="fancy">Along the Connecticut Coast</p>
+    </header>
+    <div id="main">
+        <h2>Summary</h2>
+        <p>Norwalk is a U.S. city located in southwestern
+        Connecticut, in southern <span class="fancy">Fairfield County</span>, 
+        on the northern shore of Long Island Sound. Norwalk
+        is included statistically within both the New York metropolitan
+        area as well as the Bridgeport metropolitan area.</p>
+        <p>Norwalk was settled in 1649, and is now the sixth most populous city in Connecticut. According to the 2010 United States Census the city had a population of 85,603; with an estimated population of 88,438 in 2016.</p>
+        <h2>History</h2>
+        <p>Norwalk was settled in 1649, incorporated September 1651, and named after the Algonquin word noyank, meaning “point of land”, or more probably from the native American name “Naramauke.”</p>
+        <p>The Battle of Norwalk took place during the Revolutionary War. This battle resulted in the burning of most of the town. In 1836, the borough of Norwalk was created, covering the central area of the town. In 1853, the first ever train disaster in the United States happened over the Norwalk River. During the 19th and early 20th century, Norwalk was a major railroad stop for the New York, New Haven, and Hartford Railroad. The city of South Norwalk and the remaining parts of the town of Norwalk were both combined in 1910 to form the current city.</p>
+        <h2>Demographics</h2>
+        <p>As of the census of 2010, there were 85,603 people, 35,415 households, and 21,630 families residing in the city. The population density was 2,358.2 inhabitants per square mile (910.7/km²). There were 35,415 housing units at an average density of 975.6 per square mile (376.6/km²). The racial makeup of the city was 68.7% White, 14.2% African American, 0.4% Native American, 4.8% Asian, 0.1% Pacific Islander, 9.0% from other races, and 2.8% from two or more races. Hispanic or Latino of any race were 24.3% of the population.</p>
+        <p>There were 35,415 households out of which 27.9% had children under the age of 18 living with them, 47.1% were married couples living together, 11.0% had a female householder with no husband present, and 38.4% were non-families. 33.0% of all households were made up of individuals, and 8.5% had someone living alone who was 65 years of age or older. The average household size in the city was 2.55, and the average family size was 3.16.</p>
+        <p>In the city, the population was spread out with 22% under the age of 18, 7.3% from 18 to 24, 31.7% from 25 to 44, 31.2% from 45 to 64, and 12.8% who were 65 years of age or
+            older. The median age was 40 years. For every 100 females, there were 96.2 males.</p>
+        <p>The median income for a household in the city was $76,161, and the median income for a family was $103,032\. The per capita income for the city was $43,303\. About 5.7% of families and 8.4% of the population were below the poverty line, including 10.2% of those under age 18 and 8.2% of those age 65 or over.</p>
+    </div> <!-- main -->
+</body>
+</html>

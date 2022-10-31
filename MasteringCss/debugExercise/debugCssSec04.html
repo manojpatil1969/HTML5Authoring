@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS for Forms</title>
+    <style>
+        #comtainer {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        form {
+            width: 80%;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #fafafa;
+        }
+
+        input {
+            width: 100%;
+            height: 35px;
+            margin-bottom: 20px;            
+            font-size: 1.50em;
+            background-color: #ececec;
+            border: none;
+            border-bottom: 2px dashed blue;
+        }
+
+        select {
+            width: 100%;
+            height: 35px;
+            font-size: 1.5em;
+            background-color: #ececec;
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 25px;
+            zoom:2;
+            padding-bottom: 0px;
+        }
+
+        form label {
+            font-family: Arial;
+            font-size: 1.5em;
+        }
+
+        button {
+            width: 100%;
+            height: 35px;
+            font-size: 1.5em;
+            background-color: orange;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Learn To Code</h2>
+        <form action="#" ethod="post">
+            <input type="text" id="first" placeholder="First Name"> <br/>
+            <input type="text" id="last" placeholder="Last Name"> <br/>
+            <input type="email" id="email" placeholder="email"> <br/>
+            <input type="phone" id="phone" placeholder="Phone Number"> <br/>
+            <select name="edu" id="edu">
+                <option value="1">Level of Education</option>
+                <option value="2">Did not graduate</option>
+                <option value="3">High School or GED</option>
+                <option value="4">Some College</option>
+                <option value="5">Undergraduate Degree</option>
+                <option value="6">Graduate Degree</option>
+            </select> <br/>
+            <table>
+                <tr>
+                <td><input type="checkbox" id="mailMe" name="mailMe"></td>
+                <td><label for="mailMe">Please send me additional information about Learning To Code:</label></td>
+                </tr>
+            </table>
+            <button>Submit</button>
+        </form>
+    </div>
+</body>
+</html>

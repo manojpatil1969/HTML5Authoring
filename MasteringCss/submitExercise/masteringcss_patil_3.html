@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+    <style>
+        #container {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        h1 {
+            text-align: center;
+            color: red;
+            font-family: Arial;
+            font-size: 1.5em;
+        }
+
+        th, td {
+            width: 20%;
+            text-align: center;
+            padding: 10px 0px 10px 0px;
+        }
+
+        .ontime {
+            color: green;
+        }
+
+        .boarding {
+            color: blue;
+        }
+
+        .now {
+            color: red;
+        }
+
+        #firstrow {
+            background-color: lightseagreen;
+            text-align: center;
+        }
+
+        .altrow {
+            background-color: aquamarine;            
+        }
+
+        #header > h2{
+            color: blue;
+            text-align: center;
+            font-family: Arial;
+            font-size: 1.2em;
+        }
+        #footer {
+            border-top: 2px dashed blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>ABC Airlines</h1>
+            <h2>Flight Departure Board</h2>
+        </div>
+        <div>
+            <table>
+                <tr id="firstrow">
+                    <th>AIRLINE</th><th>FLIGHT NO</th><th>TO</th><th>TIME</th><th>GATE</th><th>STATUS</th>
+                </tr>
+                <tr><td>Delta</td><td>4148</td><td>Detroit</td><td>5.45am</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr class="altrow"><td>Delta</td><td>2669</td><td>Atlanta</td><td>6.00am</td><td>2</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr><td>American</td><td>5678</td><td>Washington-DCA</td><td>6.08am</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr class="altrow"><td>JetBlue</td><td>1895</td><td>Orlando</td><td>6.30am</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr><td>American</td><td>3017</td><td>Chicago-O'Hare</td><td>7.00am</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr class="altrow"><td>Delta</td><td>4930</td><td>Atlanta</td><td>7.00am</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr><td>American</td><td>5254</td><td>Washington-DCA</td><td>3.08pm</td><td>H</td><td><span class="boarding">BOARDING</span></td></tr>
+                <tr class="altrow"><td>American</td><td>5019</td><td>Washington-DCA</td><td>4.29pm</td><td>A</td><td><span class="now">Now 4.50P</span></td></tr>
+                <tr><td>Delta</td><td>4135</td><td>Detroit</td><td>4.29pm</td><td>C</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr class="altrow"><td>American</td><td>3019</td><td>Chicago-O'Hare</td><td>4.30pm</td><td>G</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr><td>Delta</td><td>2270</td><td>Atlanta</td><td>5.29pm</td><td>2</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr class="altrow"><td>American</td><td>5401</td><td>Washington-DCA</td><td>5.29pm</td><td>-</td><td><span class="boarding">BOARDING</span></td></tr>
+                <tr><td>United</td><td>3836</td><td>Chicago-O'Hare</td><td>6.00pm</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr class="altrow"><td>JetBlue</td><td>813</td><td>Ft.Lauderdale</td><td>6.46pm</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr><td>American</td><td>5388</td><td>Charlolte, NC</td><td>6.59pm</td><td>-</td><td><span class="boarding">BOARDING</span></td></tr>
+                <tr class="altrow"><td>Delta</td><td>3281</td><td>Atlanta</td><td>7.6pm</td><td>2</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr><td>JetBlue</td><td>857</td><td>W.Palm Beach</td><td>7.47pm</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+                <tr class="altrow"><td>American</td><td>5236</td><td>Washington-DCA</td><td>8.49pm</td><td>-</td><td><span class="boarding">BOARDING</span></td></tr>
+                <tr><td>JetBlue</td><td>2167</td><td>W.Palm Beach</td><td>9.00pm</td><td>-</td><td><span class="ontime">ON TIME</span></td></tr>
+            </table>
+        </div>
+        <div id="footer">
+            Copyright &copy;2020 ABC Airlines
+        </div>
+    </div>
+</body>
+</html>
