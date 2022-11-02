@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton|Domine">
+    <title>Responsive Design</title>
+    <style>
+        #container, body {
+            margin: 0;
+            padding: 0;
+            font-family: Domine, serif;
+        }
+
+        header {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.2em;
+            text-align: center;
+            color: #005;
+            background-color: #efefef;
+            border-top: 10px solid #aaa;
+            padding-bottom: 10px;
+            width: 100%;
+            border-bottom: 5px solid #005;
+        }
+
+        header h1 {
+            font-size: 3em;
+        }
+
+        header h4 {
+            font-size: 0.75em;
+            margin-top: 3px;
+        }
+
+        .gray {
+            color: #aaa;
+        }
+
+        #about, .story {
+            margin: 10px;
+            border: 1px solid #005;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #efefef;
+            box-shadow: 2px 2px #ccc;
+        }
+
+        .story { background-color: #eef; }
+
+        .story, p { margin-bottom: 5px; }
+
+        #about h2, .story h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            border-top: 1px solid #aaa;
+            bottom: 0px;
+            position: fixed;
+            width: 100%;
+            height: 20px;
+            background-color: #eef;
+            font-size: 0.75em;
+            margin-top: 10px;
+        }
+
+        footer p { margin-top: 3px ;}
+
+        img { width: 100%;}
+
+        @media screen and (min-width:600px) {
+            header { font-size: 2em;}
+            .story { width: 45%; float: left;}
+            .story img {width: 50%; float: left;}
+        }
+
+        @media screen and (min-width: 1024px) {
+            header { font-size: 3em;}
+            #about { width: 10%; float: left;}
+            .story { width: 45%; float: left; line-height: 1.2em;}
+            #stories { width: 87%; float: right;}
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1><span class=”grey”>TECHNO</span>news</h1>
+            <h2>Technology Headlines 24/7</h2>
+            <h4>May 15, 2019</h4>
+        </header>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum consectetur iusto dolor saepe tempora perspiciatis harum maiores nesciunt assumenda nisi aperiam veritatis mollitia repudiandae explicabo, id quaerat. Molestias, in perferendis.Qui laborum corporis nemo vel voluptatum incidunt in animi velit laboriosam dolor nihil tempora veniam cum corrupti repellat a, dolorum reprehenderit fuga explicabo saepe quae autem impedit perferendis minima. Enim?</p>
+        </section>
+
+        <section id="stories">
+            <div class="story">
+                <h2>Keep on Loving You</h2>
+                <img src="/images/Boeing737.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit numquam nulla culpa voluptatum ratione laborum, necessitatibus veniam minima sunt quos architecto pariatur! Tempore, iure. Commodi, cum! Consequatur, saepe quod!
+                Reprehenderit maxime expedita vitae, obcaecati cumque, autem eum perspiciatis, ipsum illo ipsam beatae consequatur molestias. Temporibus iste velit voluptatem libero quos rem eius atque. Optio expedita delectus non eligendi vel?
+                Ipsam dolorum rerum consectetur quis enim reiciendis modi quam cupiditate officia, quia tenetur facilis minima ea quos sed. Alias consectetur nemo repellat doloribus provident. Cumque quis nisi iste incidunt similique!</p>
+            </div>
+            <div class="story">
+                <h2>Only the Lonley</h2>
+                <img src="/images/Boeing737.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit numquam nulla culpa voluptatum ratione laborum, necessitatibus veniam minima sunt quos architecto pariatur! Tempore, iure. Commodi, cum! Consequatur, saepe quod!
+                Reprehenderit maxime expedita vitae, obcaecati cumque, autem eum perspiciatis, ipsum illo ipsam beatae consequatur molestias. Temporibus iste velit voluptatem libero quos rem eius atque. Optio expedita delectus non eligendi vel?
+                Ipsam dolorum rerum consectetur quis enim reiciendis modi quam cupiditate officia, quia tenetur facilis minima ea quos sed. Alias consectetur nemo repellat doloribus provident. Cumque quis nisi iste incidunt similique!</p>
+            </div>
+            <div class="story">
+                <h2>Pictures of you</h2>
+                <img src="/images/Boeing737.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit numquam nulla culpa voluptatum ratione
+                laborum, necessitatibus veniam minima sunt quos architecto pariatur! Tempore, iure. Commodi, cum! Consequatur, saepe quod!
+                Reprehenderit maxime expedita vitae, obcaecati cumque, autem eum perspiciatis, ipsum illo ipsam beatae consequatur molestias. Temporibus iste velit voluptatem libero quos rem eius atque. Optio expedita delectus non eligendi vel?
+                Ipsam dolorum rerum consectetur quis enim reiciendis modi quam cupiditate officia, quia tenetur facilis minima ea quos sed. Alias consectetur nemo repellat doloribus provident. Cumque quis nisi iste incidunt similique!</p>
+            </div>
+            <div class="story">
+                <h2>Long Train Running</h2>
+                <img src="/images/Boeing737.jpg">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati odit numquam nulla culpa voluptatum ratione laborum, necessitatibus veniam minima sunt quos architecto pariatur! Tempore, iure. Commodi, cum! Consequatur, saepe quod!
+                Reprehenderit maxime expedita vitae, obcaecati cumque, autem eum perspiciatis, ipsum illo ipsam beatae consequatur molestias. Temporibus iste velit voluptatem libero quos rem eius atque. Optio expedita delectus non eligendi vel?
+                Ipsam dolorum rerum consectetur quis enim reiciendis modi quam cupiditate officia, quia tenetur facilis minima ea quos sed. Alias consectetur nemo repellat doloribus provident. Cumque quis nisi iste incidunt similique!</p>
+            </div>
+        </section>
+        <footer>
+            <p>Copyright &copy;2019 | Framework Television | Norwalk, CT</p>
+        </footer>
+    </div>
+</body>
+</html>

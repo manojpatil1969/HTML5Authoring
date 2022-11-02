@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200">
+    <title>Transitions & Animations</title>
+    <style>
+        #container {
+            font-family: Raleway;
+            background-color: #fafafa;
+        }
+
+        header, #thumbs {
+            background-color: beige;
+            width: 96%;
+            margin: 0 auto;
+            box-shadow: 2px 2px #eee;
+            text-align: center;
+        }
+
+        header p {
+            color: red;
+            padding-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        header h1 { font-size: 3em;}
+        header h2 { font-size: 2em; padding-bottom: 10px;}
+
+        #feature { text-align: center;}
+
+        #feature img {
+            width: 30%;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #thumbs img {
+            width: 10%;
+            margin: 10px 20px 10px 20px;
+            opacity: 0.35;
+            box-shadow: 2px 2px #ccc;
+        }
+
+        #thumbs img:hover {
+            opacity: 1.0;
+            transition: all 1s;
+            transition-delay: 1s;
+            transform: rotate(15deg) scale(1.25, 1.25);
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const images = document.getElementsByTagName("img");
+            for (var x=1; images.length; x++) {
+                images[x].addEventListener('click', function() {
+                    let loc = this.src;
+                    document.getElementById('featureimage').src = loc;
+                });
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <p>For Sale</p>
+            <h1>129 Maple Ave South</h1>
+            <h2>Westport, CT 06880</h2>
+            <h2>$699,000</h2>
+        </header>
+
+        <div id="feature">
+            <img id="featureimage" src="/images/Tshirt01.jpg" alt="T-shirt 01/250/250">
+        </div>
+
+        <div id="thumbs">
+            <img src="" alt="">
+            <img src="/images/Tshirt01.jpg" alt="T Shirt-01/250/250">
+            <img src="/images/Tshirt02.jpg" alt="T Shirt-02/240/240">
+            <img src="/images/Tshirt03.jpg" alt="T Shirt-03/250/250">
+            <img src="/images/Tshirt04.jpg" alt="T Shirt-04/250/250">
+            <img src="/images/Tshirt05.jpg" alt="T Shirt-05/250/250">
+            <img src="/images/Tshirt06.jpg" alt="T Shirt-06/250/250">
+            <img src="/images/Tshirt07.jpg" alt="T Shirt-07/250/250">
+            <img src="/images/Tshirt08.jpg" alt="T Shirt-08/250/250">
+            <img src="/images/Tshirt09.jpg" alt="T Shirt-09/250/250">
+            <img src="/images/Tshirt10.jpg" alt="T Shirt-10/250/250">
+            <img src="/images/Tshirt11.jpg" alt="T Shirt-11/250/250">
+        </div>
+    </div>    
+</body>
+</html>
