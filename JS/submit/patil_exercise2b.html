@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#2b JavaScript</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var num = 0;
+        num = parseFloat(prompt("Enter a number: "));
+        var out = "You entered number: " + num;
+        num += 10;
+        out += "<br/>Number + 10 = " + num;
+        num += 20;
+        out += "<br/>Number + 20 = " + num;
+        num += 50;
+        out += "<br/>Number + 50 = " + num;
+        num += 1568;
+        out += "<br/>Number + 1568 = " + num;
+        document.getElementById("output").innerHTML = out;
+    </script>
+</body>
+</html>

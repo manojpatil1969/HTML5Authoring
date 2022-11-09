@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercise 01</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var propername1 = prompt("Enter a proper name 1: ");
+        var propername2 = prompt("Enter proper name 2: ");
+        var verb1 = prompt("Enter verb 1: ");
+        var verb2 = prompt("Enter verb 2: ");
+        var verb3 = prompt("Enter verb 3: ");
+        var adj1 = prompt("Enter adjective 1: ");
+        var adj2 = prompt("Enter adjective 2: ");
+        var adj3 = prompt("Enter adjective 3: ");
+        var out = "Roses are Red, Violets are blue.<br/>";
+        out += propername1 + " " + "left town without wearing a shoe.<br/>";
+        out += propername2 + " " + verb2 + "<br/>";
+        out += " And " + propername1 + " " + verb3;
+        out += "<br/> But I am " + adj1 + " " + propername1 + " and " + adj2 + " " + propername2 + " thought<br/>";
+        out += "And kind of " + " " + adj3 + " too !"; 
+
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch statement</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var airport = prompt("Originating from [LGA|JFK|EWR");
+        var out = "";
+
+        switch(airport)
+        {
+            case "LGA": out += "LaGuardia Airport <br/>";
+                        out += "Queens, New York";
+                        break;
+
+            case "JFK": out += "John F.Kennedy International Airport <br/>";
+                        out += "Queens, New York";
+                        break;
+
+            case "EWR": out += "Newark International Airport <br/>";
+                        out += "Newark, New Jersey";
+                        break;
+
+            default:    out += "Can't identify airport code."
+        }
+
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug#2</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var fname = prompt("Enter your friend's name: ");
+        var loc = prompt("In which city or town do you live? ");
+        var age = prompt("Enter your age? ");
+        var pets = prompt ("Do you have any pets? ");
+        var food = prompt("What is your favorite food? ");
+
+        var out = "This is my friend " + fname;
+        out += "<br/>" + fname + " lives in " + loc;
+        out += "<br/>" + fname + " is " + age + "Years old.";
+        out += "<br/>" + fname + " likes to eat " + food;
+        document.getElementById("output").innerHTML = out;
+    </script>
+</body>
+</html>

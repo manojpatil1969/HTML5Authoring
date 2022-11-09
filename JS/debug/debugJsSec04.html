@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug#4</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var salary = prompt("Enter your salary: ");
+        var taxRate;
+
+        if (salary > 150000) {
+            taxRate = 0.0155;
+        } else if (salary > 115000) {
+            taxRate = 0.0125;
+        } else if(salary > 92500) {
+            taxRate = 0.011;
+        } else if (salary > 70000) {
+            taxRate = 0.0095;
+        } else {
+            taxRate = 0.006;
+        }
+
+        var taxBill = salary * taxRate;
+        var out = "Salary: " + salary + "<br/>"
+            out += "Tax Rate: " + taxRate + "<br/>";
+            out += "Tax Bill: " + taxBill 
+        
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>
