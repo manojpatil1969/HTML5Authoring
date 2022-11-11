@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7 JavaScript</title>
+    <script src="/scripts/player.js"></script>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let p1 = new Player('Nick');
+        let out = "";
+
+        out += p1.moveRight();
+        out += p1.moveDown();
+        out += p1.die();
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

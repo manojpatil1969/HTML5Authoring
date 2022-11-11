@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Section 7</title>
+    <script src="/scripts/car.js"></script>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        //Create object or instance
+        var myHonda = new Car("Sedan", "Honda", "Civil", 2017);
+        var myLexus = new Car("Sedan", "Lexus", "330", 2015);
+
+        //alert(myHonda.model);
+        myHonda.accelerate();
+        myHonda.accelerate();
+        myHonda.accelerate();
+        myHonda.accelerate();
+        myHonda.brake();
+        //alert(myLexus.model);
+        myLexus.accelerate();
+        var out = "";
+        out += myLexus.make + " going " + myLexus.speed + " MPH.";
+        document.getElementById('output').innerHTML = out;
+</script>
+</body>
+</html>

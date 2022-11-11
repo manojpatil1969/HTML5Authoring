@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#6 Javascript</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var GPAS = [];
+        var gpa = "";
+        var out = "";
+
+        while(gpa != "XXX")
+        {
+            gpa = prompt("Enter GPA | XXX to quit: ");
+            if(gpa != "XXX") {
+                GPAS.push(parseFloat(gpa));
+            }
+        }
+
+        GPAS.sort();
+        GPAS.reverse();
+        var len = GPAS.length;
+        var min = GPAS[len-1];
+        var max = GPAS[0];
+        var sum = 0;
+        var i = 0;
+        
+        out += "Total No.of items inserted in GPA array are: " + len;
+        out += "<br/>Elements of the array are: " + GPAS;
+        out += "<br/>Minimum GPA: " + min;
+        out += "<br/>Maximum GPA: " + max;
+
+        for(i=0; i<len; i++)
+        {
+            sum += GPAS[i];
+        }
+        var average = sum / len;
+        out += "<br/>Sum of GPA: " + sum;
+        out += "<br/>Average GPA: " + average;
+        out += "<br/>GPA above 3.4 are: <br/>";
+        for(i=0; i<len; i++)
+        {
+            if (GPAS[i] > 3.4) out += GPAS[i] +  "<br/>";
+        }
+
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>
