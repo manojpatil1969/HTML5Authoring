@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug#12</title>
+    <script src="/scripts/empl.js"></script>
+    </head>
+<body>
+    <div id="output"></div>
+    <script>
+
+        let fullname = employee.firstname + " " + employee.lastname;
+        let out = "";
+
+        out += `The emploess name is ${fullname}` + "<br/>";
+        out += `The employee position is ${employee.position}` + "<br/>";
+        out += `${person.welcome()}`;
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

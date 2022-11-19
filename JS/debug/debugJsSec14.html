@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Section 14</title>
+    <script src="/scripts/employee.js"></script>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let scott = new Employee("Scott", "Wilson", "090-00-0000", "Accountant", 36.50);
+        let out = scott.info();
+        scott.fire();
+        out += scott.info();
+
+        let bob = new PTEmployee("Bob", "Johnson", "080-00-0000", "Driver", 18, 20);
+        out += bob.info();
+
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

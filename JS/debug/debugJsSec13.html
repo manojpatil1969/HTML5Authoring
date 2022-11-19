@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug#13</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let catalog = {
+            artist: [
+                {
+                    name: "Journey",
+                    hits: ["Faithfully", "Only the young", "Don't stop believing"]
+                },
+
+                {
+                    name: "REO Speedwagon",
+                    hits: ["Keep On Loving You", "Time For Me To Fly", "Can't Fight This Feeling"]
+                },
+
+                {
+                    name: "Styx",
+                    hits: ["Come Sail Away", "Mr.Roboto", "Blue Collar Man"]
+                }
+            ]
+        }
+        let out = "";
+        let {hits} = catalog.artist[2];
+        for(let x in hits) {
+            out += hits[x] + "<br/>";
+        }
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

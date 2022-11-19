@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Exercise Section 10</title>
+</head>
+<body>
+    <h1>Submit Exercise Section 10</h1>
+    <h2>Crampers Work Assignment</h2>
+    <label for="name">Name: </label>
+    <input type="text" id="name"> <br/>
+
+    <label for="camperTask">Camper Task: </label>
+    <input type="text" id="camperTask"> <br/>
+
+    <button id="btnAddToMap" onClick="ADDBUTTON.onClick()">Add To Map Object</button>
+    <button id="btnDisplayMap" onClick="DISPLAYBUTTON.onClick()">Display Map</button>
+    <div id="result"></div>
+
+    <script>
+        const ADDBUTTON = document.getElementById('btnAddToMap');
+        const DISPLAYBUTTON = document.getElementById('btnDisplayMap');
+
+        let tasks = new Map();
+        let out = "";
+
+        ADDBUTTON.onClick = function() {
+            const name = document.getElementById("name");
+            const task = document.getElementById("camperTask");
+
+            tasks.set(task.value, name.value);
+            name.value="";
+            task.value="";
+            out += "Camper Task and Name Added.<br/>";
+            document.getElementById('result').innerHTML = out;
+        };
+
+        DISPLAYBUTTON.onClick = function() {
+            //let out = "";
+            for(let x of tasks.entries())
+            {
+                out += x[0] + " : " + x[1];
+                out += "<br/>";
+            }
+            document.getElementById('result').innerHTML = out;
+        };
+    </script>
+
+</body>
+</html>

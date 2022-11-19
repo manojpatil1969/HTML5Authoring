@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section#13 Practice</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let person = {
+            firstname: "Mark",
+            lastname: "Lassoff",
+            age: 44,
+            city: "Norwalk",
+            state: "Connecticut"
+        }
+
+        let out = "";
+        out += "Firstname: " + person.firstname + "<br/>";
+        out += "Lastname : " + person.lastname + "<br/>";
+        out += "Age: " + person.age + "<br/>";
+
+        let {firstname, lastname, age} = person;
+        out += "After Object Destructuing: <br/>"
+        out += "Firstname: " + firstname + "<br/>";
+        out += "Lastname : " + lastname + "<br/>";
+        out += "Age: " + age + "<br/>";
+
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

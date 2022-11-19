@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug#8</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        function init()
+        {
+            let factor = 3;
+            const maxValue = 100;
+            const minValue = 0;
+            let x = 0;
+            let out ="";
+
+            for(x=maxValue; x>minValue; x--)
+            {
+                if(x % factor == 0) {
+                    out += x + "<br/>";
+                }
+            }
+        }
+        init();
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>

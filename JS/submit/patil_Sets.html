@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BINGO Game Exercise Section 11</title>
+    <script src="/scripts/bingo.js"></script>
+</head>
+<body>
+    <h1>BINGO Game</h1>
+    <label for="nextBingoNo">BINGO Number: </label>
+    <input type="text" id="nextBingoNo" readonly="true"><br/>
+    <button id="btnStart">Start Game</button>
+    <button id="btnNext">Show Next Number</button>
+    <button id="btnBingo">Show BINGO Numbers</button>
+
+    <div id="output"></div>
+    <script>
+        const STARTBUTTON = document.getElementById('btnStart');
+        const NEXTBUTTON = document.getElementById('btnNext');
+        const BINGOBUTTON = document.getElementById('btnBingo');
+        let mySet;
+        let myBingoSet;
+        let MAXNO = 0;
+        let out = "";
+        onStart = function() {
+            NEXTBUTTON.style.display = "none";
+            BINGOBUTTON.style.display= "none";
+        }
+    
+        onStart();
+
+        STARTBUTTON.onclick = function() {
+            mySet = new Set();
+            myBingoSet = new Set();
+
+            MAXNO = 0;
+            for(let no of numbers) {
+                mySet.add(no);
+                MAXNO += 1;
+                //out += no + "<br/>";
+            }
+            //out += "<br/>Max Numbers in mySet: " + MAXNO;
+            //out += "<br/>Random Number: " + x;
+            //document.getElementById('output').innerHTML = out;
+            STARTBUTTON.style.display = "none";
+            NEXTBUTTON.style.display = "block";
+            BINGOBUTTON.style.display= "block";
+        };
+
+        NEXTBUTTON.onclick = function() {
+            let x = Math.floor(Math.random() * MAXNO);
+            let no = [...mySet][x];
+            nextBingoNo.value = no;
+            mySet.delete(no);
+            MAXNO -= 1;
+            myBingoSet.add(no);
+        }
+
+        BINGOBUTTON.onclick = function() {
+            out += "BINGO numbers are as follows: <br/>";
+            for(let no of myBingoSet) {
+                out += no + "<br/>";
+            }
+            STARTBUTTON.style.display = "block";
+            NEXTBUTTON.style.display = "none";
+            BINGOBUTTON.style.display= "none";
+            document.getElementById('output').innerHTML = out;
+            nextBingoNo.value = "";
+            out = "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug#10 Map Exercise</title>
+</head>
+<body>
+    <h1>Add data to Map Exercise Section 10</h1>
+    <label for="name">Name: </label>
+    <input type="text" id="name"> <br/>
+
+    <label for="numericalGrade">Grade: </label>
+    <input type="number" id="numericalGrade" min="0" max="100"> <br/>
+
+    <button id="btnAddToMap" onClick="ADDBUTTON.onClick()">Add To Map Object</button>
+    <button id="btnDisplayMap" onClick="DISPLAYBUTTON.onClick()">Display Map</button>
+    <div id="result"></div>
+
+    <script>
+        const ADDBUTTON = document.getElementById('btnAddToMap');
+        const DISPLAYBUTTON = document.getElementById('btnDisplayMap');
+
+        let grades = new Map();
+        let out = "";
+
+        ADDBUTTON.onClick = function() {
+            const name = document.getElementById("name");
+            const grade = document.getElementById("numericalGrade");
+
+            grades.set(name.value, grade.value);
+            name.value="";
+            grade.value="";
+            out += "Data Added<br/>";
+            document.getElementById('result').innerHTML = out;
+        };
+
+        DISPLAYBUTTON.onClick = function() {
+            //let out = "";
+            for(let x of grades.entries())
+            {
+                out += x[0] + " : " + x[1];
+                out += "<br/>";
+            }
+            document.getElementById('result').innerHTML = out;
+        };
+    </script>
+</body>
+</html>

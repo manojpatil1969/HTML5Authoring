@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#8</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let op1 = parseFloat(prompt("Enter operand#1: "));
+        let op2 = parseFloat(prompt("Enter operand#2: "));
+        let op = prompt("Enter operator symbol (+ - * / %): ");
+        let res=0;
+        let out = "";
+
+        switch(op)
+        {
+            case "+" :  res = op1 + op2;
+                        break;
+
+            case "-" :  res = op1 - op2;
+                        break;
+
+            case "*" :  res = op1 * op2;
+                        break;
+
+            case "/" :  res = op1 / op2;
+                        break;
+
+            case "%" :  res = op1 % op2;
+                        break;
+
+            default:    out += "Invalid operator entered. Please try again...<br/>"
+        }
+        out += "Result: <br/>" + op1 + " " + op + " " + op2 + " = " + res;
+        document.getElementById('output').innerHTML = out;
+    </script>
+</body>
+</html>
