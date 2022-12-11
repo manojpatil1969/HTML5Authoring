@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.1.min.js"></script>
+    <title>jQuery 3.5: Working with Element Content </title>
+    <style>
+        #container {
+            width: 80%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.8em;
+            border: 1px dotted black;
+            padding: 15px;
+        }
+
+        #container textarea {
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+    <script>
+        $(function(){
+            console.log($("#container").html());
+            $("#thoughts").keypress(function(){
+                let text = $("#thoughts").val();
+                console.log(text);
+                $("#container p:first").text(text);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, Ut in fermentum
+            libero. Vestibulum congue risus id orci ullamcorper euismod tincidunt convallis
+            leo. Pellentesque sed orci viverra, consequat mi a, venenatis lorem. Duis in enim
+            eget enim pharetra luctus. In elementum ligula vel purus tincidunt, vel porta nunc
+            commodo. Integer dictum metus urna, id porttitor justo tempor a. Sed tempus urna
+            eget nisi fermentum pharetra. Aenean sed arcu in lectus pharetra tempor sed non
+            quam. Etiam loem odio, suscipit a ullamcorper et, luctus vel nisl. Fusce
+            fermentum vitae diam id interdum.
+        </p>
+        <p>
+            Vestibulum congue risus id orci ullamcorper euismod tincidunt convallis
+            leo. Pellentesque sed orci viverra, consequat mi a, venenatis lorem. Duis in enim
+            eget enim pharetra luctus. In elementum ligula vel purus tincidunt, vel porta nunc
+            commodo. Integer dictum metus urna, id porttitor justo tempor a. Sed tempus urna
+            eget nisi fermentum pharetra. Aenean sed arcu in lectus pharetra tempor sed non
+            quam. Etiam loem odio, suscipit a ullamcorper et, luctus vel nisl. Fusce
+            fermentum vitae diam id interdum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            Ut in fermentum libero. 
+        </p>
+        <h2>What do you think?</h2>
+        <textarea id="thoughts" cols="30" rows="5"></textarea>
+    </div>
+</body>
+</html>

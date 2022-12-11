@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.1.min.js"></script>
+    <title>jQuery 4.2: Form Change() event</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ccc;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #form {
+            font-family: Arial;
+            border: 2px dotted black;
+            padding: 20px;
+            font-size: 1.5em;
+            width: 400px;
+            margin: 10px;
+            background-color: white;
+            height: 400px;
+        }
+
+        h1 {
+            font-size: 1.25em;
+            margin: 0;
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+
+        input {
+            font-size: 1.25em;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 93%;
+            font-size: 0.85em;
+            font-weight: bold;
+            background-color: #ff8b00;
+            height: 40px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 0.8em;
+        }
+    </style>
+    <script>
+        $(function(){
+            $("p").hide();
+            $("input").focus(function(){
+                $(this).css("background-color", "yellow");
+            }).blur(function(){
+                $(this).css("background-color", "white");
+            });
+
+            $("input:last").focus(function(){
+                $("p").slideDown();
+            });
+
+            $("input:last").change(function(){
+                let pw = $("input:last").val();
+                if(pw.length < 8) {
+                    $("p").text("Your password must be 8 characters long.").show();
+                } else {
+                    $("p").text("");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="form">
+            <form action="#">
+                <h1>Sign in to your account</h1>
+                <label for="un">Username: </label>
+                <input type="text" id="un"/> <br/>
+                <label for="pw">Password: </label>
+                <input type="password" id="pw"><br/>
+                <p>Always keey your password secret.</p>
+                <button>Log In</button>
+            </form>
+        </div>
+    </div>                
+</body>
+</html>

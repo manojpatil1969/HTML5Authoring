@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.1.min.js"></script>
+    <title>jQuery 2.2: Showing and Hiding Elements</title>
+    <script>
+        $(function() {
+            $("body").click(function(event) {
+                let target = event.target.id;
+                switch(target) {
+                    case "btnBlue": 
+                        $("boxA").hide();
+                        break;
+                    case "btnGray": 
+                        $("boB").hide();
+                        break;
+                    case "btnOrange";
+                        $("boxC").hide();
+                        break;
+                    case "btnShowAll":
+                        $("boxA").show();
+                        $("boxB").show();
+                        $("boxC").show();
+                }
+            })
+        })
+    </script>
+    <style>
+        #boxA, #boxB, #boxC {
+            height: 200px;
+            width: 300px;
+            margin: 20px;
+            float: left;
+        }
+
+        #boxA {
+            background-color: blue;
+        }
+
+        #boxB {
+            background-color: Gray;
+        }
+
+        #boxC {
+            background-color: Orange;
+        }
+
+        #btnBlue, #btnGray, #btnOrange, #btnShowAll {
+            height: 40px;;
+            width: 250px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="boxA"></div>
+        <div id="boxB"></div>
+        <div id="boxC"></div>
+        <div class="clear"></div>
+        <button id="btnBlue">Hide Blue Box</button>
+        <button id="btnGray">Hide Gray Box</button>
+        <button id="btnOrange">Hide Orange Box</button>
+        <button id="btnShowAll">Show All</button>
+    </div>
+</body>
+</html>
+<!-- 
+//Program: JQuery 2.2 Animation
+//Udemy course: by Mark Lassoff
+//Filename: Laptop:E://2022LassoffProjects/HTML5Authoring/JQuery/p22.html  -->

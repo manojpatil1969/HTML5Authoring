@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 3.3: Height & width Elements</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Oswald&display=swap">
+    <style>
+        #resizeMe {
+            background-color: palegoldenrod;
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+            padding: 20px;
+        }
+
+        #resizeMe h1 {
+            font-family: 'Oswald', sans-serif;
+            margin-top: 0px;
+        }
+
+        #resizeMe p {
+            font-family: 'Indie Flower', cursive;
+        }
+
+        button {
+            margin-top: 10px;
+            width: 300px;
+            font-weight: bold;
+        }
+
+        output {
+            font-size: 0.75em;
+        }
+    </style>
+    <script>
+        $(function() {
+            $("#resizeMe").resizable();
+
+            $("button").click(function(){
+                $("#resizeMe").height(300);
+                $("#resizeMe").width(300);
+                position();
+            });
+
+            $("#resizeMe").mousemove(function() {
+                position();
+            });
+
+            function position() {
+                let out = "Height: " + $("#resizeMe").height();
+                out += "Width: " + $("#resizeMe").width();
+                $("#sizeOut").text(out);
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="resizeMe" class="ui-widget-content">
+        <h1>My Note</h1>
+        <div id="noteText" contenteditable="true">
+            <p>Type Note here...</p>
+        </div>
+    </div>
+    <button>Reset Size</button><br/>
+    <output id="sizeOut"></output>
+</body>
+</html>

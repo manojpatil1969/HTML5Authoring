@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.1.min.js"></script>
+    <title>jQuery 2.3: Hide Vs Remove</title>
+    <script>
+        let divVisible = true;
+        $(function() {
+            //Hide Effect
+            $("#btnShow").click(function() {
+                if(divVisible) {
+                    $("#boxA").hide();
+                    divVisible = !divVisible;
+                }
+                else {
+                    $("#boxA").show();
+                    divVisible = !divVisible;
+                }
+            });
+
+            //Remove effect
+            $("#btnRemove").click(function() {
+                $("#boxA").remove();
+            }) 
+        });
+    </script>
+    <style>
+        button {
+            height: 40px;
+            width: 100%;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #boxA {
+            background-color: #2175bc;
+            height: 300px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxA"></div>    
+    <button id="btnShow">Show/Hide Effect</button>    
+    <button id="btnRemove">Remove Element</button>
+</body>
+</html>
+<!-- 
+//Program: JQuery 2.3: Hide vs Remove
+//Udemy course: by Mark Lassoff
+//Filename: Laptop:E://2022LassoffProjects/HTML5Authoring/JQuery/p23.html  -->

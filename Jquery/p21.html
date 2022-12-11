@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.1.min.js"></script>
+    <title>jQuery 2.1: Fade-In/out Animation</title>
+    <script>
+        let divVisible = true;
+        $(function() {
+            $("#btnShow").click(function() {
+                if(divVisible) {
+                    $("#boxA").fadeOut(3000);
+                    divVisible = !divVisible;
+                }
+                else {
+                    $("#boxA").fadeIn(3000);
+                    divVisible = !divVisible;
+                }
+            });
+        });
+    </script>
+    <style>
+        #btnShow {
+            height: 40px;
+            width: 100%;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        #boxA {
+            background-color: #2175bc;
+            height: 300px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxA"></div>    
+    <button id="btnShow">Show Effect</button>
+</body>
+</html>
+<!-- 
+//Program: JQuery 2.1: Animation: fade-out and fade-in
+//Udemy course: by Mark Lassoff
+//Filename: Laptop:E://2022LassoffProjects/HTML5Authoring/JQuery/p21.html  -->

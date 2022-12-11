@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.1.min.js"></script>
+    <title>JQuery 1.6: Basic Selectors</title>
+    <script>
+        $(document).ready (
+            function() {
+                $("div").css("background-color", "blue");
+                $("p").css("font-weight", "bold");
+                $("#boxC").slideUp();
+                $("#boxA").css("background-color", "red");
+                $(".main").css("font-family", "Arial");
+            }
+        )
+    </script>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: black;
+            margin-bottom: 10px;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxA"><p>This is Box A.</p></div>
+    <div id="boxB">This is Box B.</div>
+    <div id="boxC"><p class="main">This is Box C.</p></div>
+</body>
+</html>
+<!-- 
+//Program: JQuery 1.6: JQuery Selectors
+//Udemy course: by Mark Lassoff
+//Filename: Laptop:E://2022LassoffProjects/HTML5Authoring/JQuery/p06.html  -->

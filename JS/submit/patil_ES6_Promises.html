@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Section 15 Promises</title>
+</head>
+<body>
+    <div id="image-holder"></div>
+    <script>
+        var img = null;
+        let imgPromise = new Promise(function(resolve, reject) {
+            img = new Image();
+            img.addEventListener('load', resolve(img));
+            img.addEventListener('error', reject('Error: Could not load image...'));
+            img.src = "https://picsum.photos/200/300/?random";
+        });
+
+        imgPromise.then(function(fromResolve) {
+            console.log('The image has been loaded. Yah!');
+            let node = document.getElementById('image-holder');
+            node.appendChild(img);
+        }).catch(function(fromReject) {
+            console.log(fromReject);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/jquery-3.6.1.min.js"></script>
+    <title>JQuery 1.9: Other Pseudo Selectors</title>
+    <script>
+        $(document).ready (
+            function() {
+                $("div:odd").css("background-color", "blue");
+                $("div:even").css("background-color", "purple");
+                $("div:first-of-type, div:last-of-type").css("background-color", "yellow");
+            }
+        )
+    </script>
+    <style>
+        div {
+            height: 100px;
+            width: 300px;
+            background-color: black;
+            margin-bottom: 10px;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="boxA">This is Box-A</div>    
+    <div id="boxB">This is Box-B</div>    
+    <div id="boxC">This is Box-C</div>    
+    <div id="boxD">This is Box-D</div>    
+    <div id="boxE">This is Box-E</div>    
+    <div id="boxF">This is Box-F</div>    
+</body>
+</html>
+<!-- 
+//Program: JQuery 1.9: Other Pseudo Selectors
+//Udemy course: by Mark Lassoff
+//Filename: Laptop:E://2022LassoffProjects/HTML5Authoring/JQuery/p19.html  -->
